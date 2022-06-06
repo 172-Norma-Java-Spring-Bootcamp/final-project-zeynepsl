@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.HttpClientErrorException.NotFound;
 import org.springframework.web.client.HttpServerErrorException.InternalServerError;
-import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.client.RestClientException;
 
 import patika.bootcamp.onlinebanking.exception.ApiError;
@@ -26,7 +25,6 @@ public class BaseControllerAdvice {
 		return ResponseEntity.badRequest().body(ex.getMessage());
 	}
 	
-	// [org.springframework.web.method.annotation.MethodArgumentTypeMismatchExceptio
 	
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MethodArgumentNotValidException.class)
@@ -46,11 +44,11 @@ public class BaseControllerAdvice {
 		return ResponseEntity.badRequest().body(ex.getLocalizedMessage());
 	}
 	
-	/*@ResponseStatus(value = HttpStatus.BAD_REQUEST)
+	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(NullPointerException.class)
 	public ResponseEntity<Object> onNullPointerExceptionHandled(NullPointerException e) {
 		return buildResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, "NullPointerException"));
-	}*/
+	}
 
 	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
 	@ExceptionHandler(InternalServerError.class)

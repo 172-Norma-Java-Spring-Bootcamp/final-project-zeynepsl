@@ -36,6 +36,8 @@ public class AccountTests {
 	private String bankCode;
 
 	//detached entity passes to persist
+	
+	
 	@Test
 	void should_create_success_bankcard_while_customer_s_first_checkingaccount() {
 		CreateCustomerRequestDto createCustomerRequestDto = new CreateCustomerRequestDto();

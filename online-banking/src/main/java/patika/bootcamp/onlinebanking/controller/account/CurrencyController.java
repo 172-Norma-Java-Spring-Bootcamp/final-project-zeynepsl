@@ -33,11 +33,13 @@ public class CurrencyController {
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable Long id){
+		idValidator.validate(id);
 		return currencyFacade.delete(id);
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<CurrencyResponseDto> get(@PathVariable Long id){
+		idValidator.validate(id);
 		return currencyFacade.get(id);
 	}
 	

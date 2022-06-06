@@ -5,11 +5,8 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import lombok.RequiredArgsConstructor;
-import patika.bootcamp.onlinebanking.converter.card.BankCardConverter;
 import patika.bootcamp.onlinebanking.dto.account.AccountResponseDto;
 import patika.bootcamp.onlinebanking.dto.account.CreateAccountRequestDto;
-import patika.bootcamp.onlinebanking.dto.card.BankCardResponseDto;
 import patika.bootcamp.onlinebanking.model.account.Account;
 
 @Component
