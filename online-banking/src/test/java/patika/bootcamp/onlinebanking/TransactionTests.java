@@ -67,7 +67,6 @@ public class TransactionTests {
 		CreateTransactionRequestDto createTransactionRequestDto = new CreateTransactionRequestDto();
 		createTransactionRequestDto.setAmount(BigDecimal.valueOf(1));
 		createTransactionRequestDto.setModeOfPayment(ModeOfPayment.KonutKirasi);
-		createTransactionRequestDto.setSenderCurrencyId(4L);
 		createTransactionRequestDto.setSenderIbanNo(from.getIban());
 		createTransactionRequestDto.setRecipientIbanNo(to.getIban());
 		createTransactionRequestDto.setUseAllBalance(false);
@@ -103,7 +102,6 @@ public class TransactionTests {
 		CreateTransactionRequestDto createTransactionRequestDto = new CreateTransactionRequestDto();
 		createTransactionRequestDto.setAmount(BigDecimal.valueOf(1));
 		createTransactionRequestDto.setModeOfPayment(ModeOfPayment.KonutKirasi);
-		createTransactionRequestDto.setSenderCurrencyId(4L);
 		createTransactionRequestDto.setSenderIbanNo(from.getIban());
 		createTransactionRequestDto.setRecipientIbanNo(to.getIban());
 		createTransactionRequestDto.setUseAllBalance(false);
@@ -127,7 +125,6 @@ public class TransactionTests {
 		CreateTransactionRequestDto createTransactionRequestDto = new CreateTransactionRequestDto();
 		createTransactionRequestDto.setAmount(BigDecimal.valueOf(100));
 		createTransactionRequestDto.setModeOfPayment(ModeOfPayment.KonutKirasi);
-		createTransactionRequestDto.setSenderCurrencyId(4L);
 		createTransactionRequestDto.setSenderIbanNo(from.getIban());
 		createTransactionRequestDto.setRecipientIbanNo(to.getIban());
 		createTransactionRequestDto.setUseAllBalance(false);
@@ -219,7 +216,6 @@ public class TransactionTests {
 		CreateTransactionRequestDto createTransactionRequestDto = new CreateTransactionRequestDto();
 		createTransactionRequestDto.setAmount(BigDecimal.valueOf(20));
 		createTransactionRequestDto.setModeOfPayment(ModeOfPayment.KonutKirasi);
-		createTransactionRequestDto.setSenderCurrencyId(currencyService.findByCode("TRY").getId());//id 1 --> TRY
 		createTransactionRequestDto.setSenderIbanNo(from.getIban());
 		createTransactionRequestDto.setRecipientIbanNo(to.getIban());
 		createTransactionRequestDto.setUseAllBalance(false);
